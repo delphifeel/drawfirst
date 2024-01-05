@@ -65,6 +65,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+    unit_tests.linkLibrary(raylib);
 
     const run_unit_tests = b.addRunArtifact(unit_tests);
 
